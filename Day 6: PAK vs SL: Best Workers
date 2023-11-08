@@ -1,0 +1,17 @@
+public class Solution {
+    static long bestWorkers(int n, int k, int []a) {
+        // Write your code here.
+        int maxp = 0;
+
+        for (int i = 0; i <= n - k; i++) {
+            int currp = 0;
+            for (int j = i; j < i + k; j++) {
+                currp += a[j];
+            }
+            if (currp > maxp) {
+                maxp = currp;
+            }
+        }
+        return maxp;
+    }
+}
