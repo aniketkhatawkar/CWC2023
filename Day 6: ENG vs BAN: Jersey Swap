@@ -1,0 +1,29 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Solution {
+    static int replaceElements(int []a) {
+        // Write your code here.
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+
+        for (int num : a) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+
+        int operations = 0;
+
+        for (int freq : frequencyMap.values()) {
+            if (freq % 2 != 0) {
+                operations++;
+            }
+        }
+
+        if (operations % 2 == 0) {
+     
+            return operations / 2;
+        } else {
+            return -1;
+        }
+        
+    }
+}
