@@ -1,0 +1,19 @@
+public class Solution {
+    static int xAndY(int x, int y, int[] a) {
+        // Write your code here.
+        int lb=Integer.MAX_VALUE, len=a.length;
+
+        for(int i=0; i<len; i++){
+            if(a[i]>=x && a[i]<=y){
+                if(a[i]<lb){
+                    lb=a[i];
+                }
+            }
+        }
+
+        if(lb!=Integer.MAX_VALUE)
+            return lb;
+        
+        return -1;
+    }
+}
