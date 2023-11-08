@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Solution {
+    static int minDifference(int []a) {
+        // Write your code here.
+        Arrays.sort(a);
+
+        int min = Integer.MAX_VALUE;
+
+        for (int i = 1; i < a.length; i++) {
+            int diff = a[i] - a[i - 1];
+            if (diff < min) {
+                min = diff;
+            }
+        }
+
+        return min;
+    }
+}
