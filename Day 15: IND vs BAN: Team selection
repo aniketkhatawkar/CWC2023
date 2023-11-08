@@ -1,0 +1,25 @@
+import java.util.Arrays;
+
+public class Solution {
+    static int maxDifference(int m, int[] a) {
+        int len = a.length;
+        if (m == len)
+            return 0;
+
+        Arrays.sort(a);
+
+        int t1 = 0, t2 = 0, count = len - 1;
+
+        for (int i = 0; i < m; i++) {
+            t1 += a[i];
+            t2 += a[count--];
+        }
+
+        return Math.abs(t1 - t2);
+    }
+}
+
+
+
+
+
