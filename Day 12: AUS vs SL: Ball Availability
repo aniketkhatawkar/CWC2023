@@ -1,0 +1,35 @@
+import java.util.*;
+public class Solution {
+    static int productionHouse(int n, int m, int[] days, int[] needs) {
+        // Write your code here.
+        TreeMap<Integer, Integer> tm = new TreeMap<>();
+
+        for (int i = 0; i < m; i++) {
+            tm.put(days[i], needs[i]);
+        }
+
+        Arrays.sort(days);
+
+        int ballsPro = n;
+        int day = 1;
+
+        for (int i = 0; i < m; i++) {
+            int currDay = days[i];
+
+            while (day < currDay) {
+                ballsPro += n;
+                day++;
+            }
+
+            int currNeed = tm.get(currDay);
+
+            if (currNeed <= ballsPro) {
+                ballsPro -= currNeed;
+            } else {
+                return 0;
+            }
+        }
+
+        return 1;
+    }
+}
