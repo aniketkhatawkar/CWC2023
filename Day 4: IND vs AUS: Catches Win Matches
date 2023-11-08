@@ -1,0 +1,12 @@
+public class Solution {
+    static int kaiserImpact(int n, int m, int a, int b, int w, double k) {
+        // Write your code here.
+        double ballY = k * a;
+
+        if (ballY >= b - w && ballY <= b + w) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+}
