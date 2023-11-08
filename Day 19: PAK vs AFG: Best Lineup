@@ -1,0 +1,17 @@
+import java.util.*;
+public class Solution {
+    static long bestLineup(int n, int[] x) {
+        // Write your code here.
+        Arrays.sort(x);
+        
+        // Initialize the score
+        long score = 0, count=0;
+        
+        // Calculate the score by summing (x[i] - i) ^ 2 for each player
+        for (int i = n-1; i >-1; i--) {
+            score += Math.pow(x[i] - count++, 2);
+        }
+
+        return score;
+    }
+}
