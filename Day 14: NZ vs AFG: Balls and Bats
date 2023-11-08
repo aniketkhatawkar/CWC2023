@@ -1,0 +1,25 @@
+public class Solution {
+    static int ballsAndbats(int n, int[] s, int[] m, int x, int y) {
+        // Write your code here.
+        int left = 1; 
+        int right = Integer.MAX_VALUE;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+
+            long totalBalls = 0;
+            long totalBats = 0;
+            for (int i = 0; i < n; i++) {
+                totalBalls += (long) s[i] * mid;
+                totalBats += (long) m[i] * mid;
+            }
+
+            if (totalBalls >= x && totalBats >= y) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+
+        return left;
+    }
+}
