@@ -1,0 +1,6 @@
+public class Solution {
+    static int gearSelection(int n) {
+        // Write your code here.
+        return n*(n-1);
+    }
+}
