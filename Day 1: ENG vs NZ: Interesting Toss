@@ -1,0 +1,11 @@
+public class Solution {
+    static int coinGame(int x, int y) {
+        // Write your code here.
+        int xdivi=x/3;
+
+        if(xdivi<=y && xdivi%2!=0 || xdivi>=y && y%2!=0)
+            return 1;
+        else 
+            return 0;
+    }
+}
