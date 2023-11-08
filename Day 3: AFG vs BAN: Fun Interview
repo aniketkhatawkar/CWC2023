@@ -1,0 +1,21 @@
+public class Solution {
+    static long[] countOperations(int n, int[] a, long x, int q, int[][] queries) {
+        // Write your code here.
+        long[] b = new long[q];
+        long sum = 0;
+
+        for (int i = 0; i < n; i++) {
+            sum += a[i];
+        }
+
+        for (int i = 0; i < q; i++) {
+            int k = queries[i][0];
+            int y = queries[i][1];
+            sum = sum - a[k] + y;
+            a[k] = y;
+            b[i] = (sum + x - 1) / x; // minimum number of operations
+        }
+
+        return b;
+    }
+}
