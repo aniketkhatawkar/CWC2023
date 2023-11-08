@@ -1,0 +1,15 @@
+public class Solution {
+    static int minimumTime(int x, int y, int z) {
+        // Write your code here.
+        int count=-1;
+        while(x>1 || y>1 || z>1){
+            count+=6;
+            count+=x%2;
+            count+=y%2;
+            count+=z%2;
+            x/=
+        }
+
+        return count+30;
+    }
+}
