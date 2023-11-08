@@ -1,0 +1,24 @@
+public class Solution {
+    static int checkSequence(int a, int d, int x) {
+        // Write your code here.
+        if (a == x) {
+            return 1;
+        }
+        if (d == 0) {
+            return 0;
+        }
+
+        int currentScore = a;
+        while (currentScore != x) {
+            if (d > 0 && currentScore > x) {
+                return 0; 
+            }
+            if (d < 0 && currentScore < x) {
+                return 0; 
+            }
+            currentScore += d;
+        }
+
+        return 1;
+    }
+}
