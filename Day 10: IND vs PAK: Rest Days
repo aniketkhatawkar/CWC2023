@@ -1,0 +1,21 @@
+import java.util.Arrays;
+public class Solution {
+    static String ninjaWantsHoliday(int n, int k, int []a) {
+        // Write your code here.
+        Arrays.sort(a);
+
+        int count = 1;
+
+        for (int i = 1; i < n; i++) {
+            if (a[i - 1] + 1 == a[i]) {
+                count += 1;
+                if (count >= k) {
+                    return "YES";
+                }
+            } else {
+                count = 1;
+            }
+        }
+        return "NO";
+    }
+}
