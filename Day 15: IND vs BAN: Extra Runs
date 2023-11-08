@@ -1,0 +1,11 @@
+public class Solution {
+    static long extraRuns(int n, int m, int x) {
+        // Write your code here.
+        long extraRunsPerDay = Math.max(n - m, 0);
+
+        // Calculate the total extra runs scored.
+        long totalExtraRuns = extraRunsPerDay * x;
+
+        return totalExtraRuns;
+    }
+}
