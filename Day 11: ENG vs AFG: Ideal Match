@@ -1,0 +1,14 @@
+public class Solution {
+    static String ninjaAndIdealGas(int r, int o, int n, int t, int i) {
+        // Write your code here.
+        long productRO = r * o;
+        long productNTI = n * t * i;
+
+        // Check if the products are equal
+        if (productRO == productNTI) {
+            return "YES";
+        } else {
+            return "NO";
+        }
+    }
+}
