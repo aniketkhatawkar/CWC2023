@@ -1,0 +1,10 @@
+public class Solution {
+    static int planetMisery(int n, int m) {
+        // Write your code here.
+        int maxmeet=Math.min(n, m);
+        if(m>maxmeet || n>maxmeet)
+            return maxmeet+maxmeet+1;
+        else   
+            return m+n;
+    }
+}
