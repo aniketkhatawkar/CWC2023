@@ -1,0 +1,12 @@
+public class Solution {
+    static long totalChocolates(int n, int []a) {
+        // Write your code here.
+        long count=0;
+        for(int i=0; i<n; i++){ 
+            if(a[i]>23)
+                count=count+(a[i]-23);
+        }
+
+        return count;
+    }
+}
