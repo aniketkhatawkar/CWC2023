@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Solution {
+    static int maxEvenSum(int n, int []a) {
+        // Write your code here.
+        ArrayList<Integer> al = new ArrayList<>();
+
+        for(int i=0; i<n; i++){
+            al.add(a[i]);
+        }
+
+        int maxsp = -1;
+
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+                int temp = a[i] + a[j];
+                if (al.contains(temp) && a[i]%2==0 && a[j]%2==0) {
+                    maxsp = Math.max(maxsp, temp);
+                }
+            }
+        }
+
+        if(maxsp==0)
+            return -1;
+
+        return maxsp;
+    }
+}
