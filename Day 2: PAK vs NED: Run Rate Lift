@@ -1,0 +1,18 @@
+public class Solution {
+    static int liftStruggle(int d) {
+        // Write your code here.
+        int overCount = 0;
+        int currentRunRate = 0;
+
+        while (currentRunRate < d) {
+            if (currentRunRate + 3 <= d) {
+                currentRunRate += 3;
+            } else {
+                currentRunRate -= 2;
+            }
+            overCount++;
+        }
+
+        return overCount;
+    }
+}
