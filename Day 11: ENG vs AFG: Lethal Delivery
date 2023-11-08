@@ -1,0 +1,12 @@
+public class Solution {
+    static int maximumSquareDivisor(int n) {
+        // Write your code here.
+        for (int x = (int) Math.sqrt(n); x >= 1; x--) {
+            if (n % (x * x) == 0) {
+                return x;
+            }
+        }
+        
+        return 1;
+    }
+}
