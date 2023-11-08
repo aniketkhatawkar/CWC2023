@@ -1,0 +1,15 @@
+import java.util.*;
+public class Solution {
+    static long gunDevil(int n, int[] a) {
+        // Write your code here.
+        Arrays.sort(a);
+
+        long sum=a[n-1];
+
+        for(int i=0; i<(n-2); i++){
+            sum+=a[i];
+        }
+
+        return sum;
+    }
+}
