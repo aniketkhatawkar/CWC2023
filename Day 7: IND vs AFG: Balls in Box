@@ -1,0 +1,11 @@
+public class Solution {
+    static int boxFilling(int n, int a, int b) {
+        // Write your code here.
+        int totboll = n*a;
+
+        if(totboll%b==0)
+            return totboll/b;
+        else 
+            return (totboll/b)+1;
+    }
+}
